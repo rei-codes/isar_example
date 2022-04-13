@@ -41,7 +41,10 @@ void main() async {
     user.id = await isar.users.put(user);
   });
 
-  print('${user.id} - ${user.name}');
+  // Don't care "\u001b[32m" It just makes the print green
+  print('\u001b[32m #########################');
+  print('\u001b[32m User: ${user.id} - ${user.name}');
+  print('\u001b[32m #########################');
   runApp(const MyApp());
 }
 
